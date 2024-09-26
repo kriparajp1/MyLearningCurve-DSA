@@ -38,7 +38,12 @@ class Myarray{
 
     }
     reverse(){
-        
+        for(let i=0;i<this.length-1;i++){
+            let temp=this.data[i];
+            this.data[i]=this.data[(this.length-1)-i]
+            this.data[(this.length-1)-i]=temp
+        }
+        return this.data
     }
 }
 let newArray=new Myarray()
@@ -49,12 +54,12 @@ newArray.push(5)
 newArray.push(6)
 newArray.push(7)
 newArray.push(8)
-console.log(newArray)
+console.log("new array",newArray)
 newArray.pop()
-console.log(newArray)
+console.log("poped new array",newArray)
 newArray.shift()
-console.log(newArray)
+console.log("new array .shift",newArray)
 newArray.deleteByIndex(3)
-newArray.deleteByIndex(3)
-console.log(newArray)
-console.log(newArray.get(1))
+console.log("new array deleted by index",newArray)
+console.log("new array .get by index",newArray.get(1))
+console.log("new array reversed",newArray.reverse())
