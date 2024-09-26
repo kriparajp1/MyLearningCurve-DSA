@@ -62,4 +62,19 @@ console.log("new array .shift",newArray)
 newArray.deleteByIndex(3)
 console.log("new array deleted by index",newArray)
 console.log("new array .get by index",newArray.get(1))
-console.log("new array reversed",newArray.reverse())
+console.log("new array reversed",newArray.reverse());
+
+
+let arrayChunk= (array,number)=>{
+    let temp=[];
+    let index=0;
+     while (index < array.length){
+         let sliced=array.slice(index,index+number);
+         
+         temp.push(sliced);
+        index += number;
+     }
+     return temp;
+}
+
+console.log(arrayChunk([1,2,3,5,6,4,5,6,7,8],3))
