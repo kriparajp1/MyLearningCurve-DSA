@@ -10,7 +10,6 @@ class stack{
         this.length=0;
 
     }
-
     push(elem){
         let newnode=new Node(elem);
         if(!this.first){
